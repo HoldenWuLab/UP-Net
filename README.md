@@ -21,12 +21,12 @@ Multi-echo images from undersampled radial data. Real and imaginary components s
 
 ## Usage
 
-UP-Net is an image-based network. The images needs additional pre-processing steps before using UP-Net. Pre-processing steps like self-gating, compressed sensing, and beamforming-based streaking reduction are suggested (see more details in our paper).
+UP-Net is an image-based network. The images needs additional pre-processing steps before using UP-Net. Pre-processing steps like self-gating, compressed sensing, and beamforming-based streaking reduction are suggested (see more details in our paper). \ \
 
-UP-Net was implemented in PyTorch.
-(1) "train_model.py" contains the script for training UP-Net
-(2) Different modules of the network can be found in the folder "models"
-(3) Loss functions including uncertainty loss and physics loss can be found in the folder "loss"
+UP-Net was implemented in PyTorch. \
+(1) "train_model.py" contains the script for training UP-Net \
+(2) Different modules of the network can be found in the folder "models" \
+(3) Loss functions including uncertainty loss and physics loss can be found in the folder "loss" \
 
-
-To cite this paper:  Shih, S-F, Kafali, SG, Calkins, KL, Wu, HH. Uncertainty-aware physics-driven deep learning network for free-breathing liver fat and R2* quantification using self-gated stack-of-radial MRI. Magn Reson Med. 2023; 89: 1567- 1585. doi:10.1002/mrm.29525
+## To cite this paper
+Shih, S-F, Kafali, SG, Calkins, KL, Wu, HH. Uncertainty-aware physics-driven deep learning network for free-breathing liver fat and R2* quantification using self-gated stack-of-radial MRI. Magn Reson Med. 2023; 89: 1567- 1585. doi:10.1002/mrm.29525
