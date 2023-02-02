@@ -7,11 +7,8 @@ Developing, evaluating, and translating DL-based methods for quantitative MRI pa
 
 ## UP-Net architecture
 UP-Net contains 3 modules for end-to-end training: \
-\
 (1) Artifact suppression module: This module suppresses radial streaking artifacts due to undersampling from motion self-gating. \
-\
 (2) Parameter mapping module: This module takes the multi-echo input image to calculate quantitative PDFF, R2* and B0 field maps. \
-\
 (3) Uncertainty estimation module: This module calculates uncertainty maps for PDFF, R2* and B0 maps separately. The uncertainty maps can be used to predict errors in the quantification results through careful calibration (see more details in our paper). \
 The artifact suppression module is built using UNet. The other two modules are built using a "bifurcated U-Net" because of the need for shared image information between quantitative maps and their uncertainty maps.
 
@@ -30,6 +27,16 @@ UP-Net was implemented in PyTorch. \
 (1) "train_model.py" contains the script for training UP-Net \
 (2) Different modules of the network can be found in the folder "models" \
 (3) Loss functions including uncertainty loss and physics loss can be found in the folder "loss" 
+
+Loss function choice: \
+5 different loss components are used in UP-Net: \
+(1) MSE loss for image enhancement \
+(2) GAN loss for image enhancement \
+(3) MSE loss for parameter mapping \
+(4) Physics loss for fat-water modelling \
+(5) Uncertainty loss \
+Different weighting of the loss components may be required for different datasets. 
+
 
 ## To cite this paper
 Shih, S-F, Kafali, SG, Calkins, KL, Wu, HH. Uncertainty-aware physics-driven deep learning network for free-breathing liver fat and R2* quantification using self-gated stack-of-radial MRI. Magn Reson Med. 2023; 89: 1567- 1585. doi:10.1002/mrm.29525
